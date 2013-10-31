@@ -20,7 +20,7 @@ to your library.
 
 Formats:
 
-Data is orginized into a List<List<Object> > data set.
+Data is orginized into a List < List < Object > > data set.
 
 You could specify the background color, font color and margin for each sheet.
 
