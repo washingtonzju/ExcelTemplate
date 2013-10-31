@@ -9,12 +9,12 @@ Dependencies:
 
 This libarary is based on Apache POI. To make the sample work, you need to add:
 
-poi-3.9-20121203.jar
-poi-ooxml-3.9-20121203.jar
-poi-ooxml-schemas-3.9-20121203.jar
-ooxml-lib\dom4j-1.6.1.jar
-ooxml-lib\stax-api-1.0.1.jar
-ooxml-lib\xmlbeans-2.3.0.jar
+######poi-3.9-20121203.jar
+######poi-ooxml-3.9-20121203.jar
+######poi-ooxml-schemas-3.9-20121203.jar
+######ooxml-lib\dom4j-1.6.1.jar
+######ooxml-lib\stax-api-1.0.1.jar
+######ooxml-lib\xmlbeans-2.3.0.jar
 
 to your library.
 
