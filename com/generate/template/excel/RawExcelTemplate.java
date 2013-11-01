@@ -62,16 +62,16 @@ public class RawExcelTemplate {
 	 * @param data
 	 */
 	public void addSheet(String sName, List<List<Object>> data, SheetStyle ss) {
-		
+
 		CellStyle style = wb.createCellStyle();
 		style.setFillPattern(CellStyle.SOLID_FOREGROUND);
 		style.setFillBackgroundColor(ss.getTitleBackgroundColor());
 		style.setFillForegroundColor(ss.getTitleBackgroundColor());
-		
+
 		Font font = wb.createFont();
 		font.setColor(ss.getTitleFontColor());
 		style.setFont(font);
-		
+
 		Sheet sheet = wb.createSheet(sName);
 		Row titles = sheet.createRow(ss.getTopMargin());
 		int cnt = 0;
@@ -87,17 +87,16 @@ public class RawExcelTemplate {
 			itr.next();
 		else
 			return;
-		
-		
+
 		CellStyle dStyle = wb.createCellStyle();
 		dStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
 		dStyle.setFillBackgroundColor(ss.getDataBackgroundColor());
 		dStyle.setFillForegroundColor(ss.getDataBackgroundColor());
-		
+
 		Font dFont = wb.createFont();
 		dFont.setColor(ss.getDataFontColor());
 		dStyle.setFont(dFont);
-		
+
 		int rntCnt = 1;
 		while (itr.hasNext()) {
 			cnt = 0;
@@ -131,12 +130,14 @@ public class RawExcelTemplate {
 	/**
 	 * @param args
 	 * @throws IOException
-	 * @throws SecurityException 
-	 * @throws NoSuchFieldException 
-	 * @throws IllegalAccessException 
-	 * @throws IllegalArgumentException 
+	 * @throws SecurityException
+	 * @throws NoSuchFieldException
+	 * @throws IllegalAccessException
+	 * @throws IllegalArgumentException
 	 */
-	public static void main(String[] args) throws IOException, IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
+	public static void main(String[] args) throws IOException,
+			IllegalArgumentException, IllegalAccessException,
+			NoSuchFieldException, SecurityException {
 		// TODO Auto-generated method stub
 		RawExcelTemplate ret = new RawExcelTemplate("template.xlsx");
 		List<List<Object>> data = new ArrayList<List<Object>>();
@@ -149,9 +150,9 @@ public class RawExcelTemplate {
 
 			{
 				this.add("Name");
-				this.add("”¢Œƒµƒ");
+				this.add("Ëã±ÊñáÁöÑ");
 				this.add("Titles");
-				this.add("≥…π¶»À ø");
+				this.add("ÊàêÂäü‰∫∫Â£´");
 			}
 		};
 
@@ -174,8 +175,9 @@ public class RawExcelTemplate {
 			data.add(datum);
 		}
 		ret.addSheet(data);
-		SheetStyle ss = new SheetStyle("BLUE", "WHITE","LIGHT_YELLOW", "BLACK", 2, 2);
-		ret.addSheet("ΩÒÃÏ «–«∆⁄»˝¿≤", data, ss);
+		SheetStyle ss = new SheetStyle("BLUE", "WHITE", "LIGHT_YELLOW",
+				"BLACK", 2, 2);
+		ret.addSheet("‰ªäÂ§©ÊòØÊòüÊúü‰∏âÂï¶", data, ss);
 		ret.writeToFile();
 	}
 }
